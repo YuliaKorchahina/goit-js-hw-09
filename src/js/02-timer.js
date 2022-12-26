@@ -28,7 +28,6 @@ const onCloseHandle = date => {
     return;
   }
   if (date) {
-    selectedDate = date;
     btnStart.disabled = false;
     currentDateInCounter = new Date(date - options.defaultDate);
     const { day, hour, minute, second } = getDateElemnts(currentDateInCounter);
