@@ -10,6 +10,13 @@ const dayEl = document.querySelector('[data-days]');
 const hoursEl = document.querySelector('[data-hours]');
 const minutesEl = document.querySelector('[data-minutes]');
 const secondsEl = document.querySelector('[data-seconds]');
+const timer = document.querySelector('.timer');
+
+timer.style.marginTop = '20px';
+timer.style.display = 'flex';
+timer.style.justifyContent = 'center'
+timer.style.gap = '30px';
+timer.style.width = '400px';
 
 let currentDateInCounter = {};
 btnStart.disabled = true;
