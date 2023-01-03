@@ -2,7 +2,6 @@ import flatpickr from "flatpickr";
 import 'flatpickr/dist/flatpickr.min.css';
 import Notiflix from 'notiflix';
 
-
 const inputEl = document.querySelector('#datetime-picker');
 const btnStart = document.querySelector('[data-start]');
 
@@ -68,8 +67,7 @@ function timeIsOut(deadlineDate) {
   if (deadlineDate < 1000) {
     clearInterval(timerId)
     Notiflix.Notify.success('Time is over!');
-  }
-  
+  }  
 }
 
 function convertMs(ms) {
@@ -78,7 +76,6 @@ function convertMs(ms) {
   const minute = second * 60;
   const hour = minute * 60;
   const day = hour * 24;
-
   // Remaining days
   const days = Math.floor(ms / day);
   // Remaining hours
@@ -87,6 +84,5 @@ function convertMs(ms) {
   const minutes = Math.floor(((ms % day) % hour) / minute);
   // Remaining seconds
   const seconds = Math.floor((((ms % day) % hour) % minute) / second);
-
   return { days, hours, minutes, seconds };
 }
