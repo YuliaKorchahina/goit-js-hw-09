@@ -38,11 +38,11 @@ function createPromise(position, delay) {
   return promise;
 }
 
-function onSuccess({ position, delay }) {
+function onSuccess( position, delay ) {
   Notify.success(`✅ Fulfilled promise ${position} in ${delay}ms`);
 }
 
-function onError({ position, delay }) {
+function onError(position, delay ) {
   Notify.failure(`❌ Rejected promise ${position} in ${delay}ms`);
 }
 
